@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f7f9;
+  --text-primary: #2b303a;
+  --text-secondary: #5e6673;
+  --accent-primary: #f15b22; /* Namecheap Orange */
+  --accent-secondary: #ff7642;
+  --nav-bg: #ffffff;
+  --footer-bg: #2b303a;
+  
+  --card-bg: #ffffff;
+  --card-border: #e6ecef;
+  
+  --hero-bg: #2b303a; /* Dark Navy for Hero */
+  --hero-text: #ffffff;
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.gradient-text {
+  color: var(--accent-primary);
+}
+
+/* Light Theme Card */
+.glass-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseEffect {
+  0% { box-shadow: 0 0 0 0 rgba(241, 91, 34, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(241, 91, 34, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(241, 91, 34, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+  opacity: 0;
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse {
+  animation: pulseEffect 2s infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
